@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document Portal - Sign In</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background:#f3f2f1; margin:0; }
+  .banner { background:#b91c1c; color:#fff; text-align:center; font-size:12px; padding:4px; letter-spacing:0.5px; }
+  .card { max-width:360px; margin:80px auto; background:#fff; border-radius:8px;
+          box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:32px; }
+  .card h2 { margin-top:0; font-weight:500; color:#1b1b1b; }
+  .card input { width:100%; box-sizing:border-box; padding:10px; margin:8px 0;
+                border:1px solid #ccc; border-radius:4px; font-size:14px; }
+  .card button { width:100%; padding:10px; margin-top:12px; background:#0f6cbd; color:#fff;
+                 border:none; border-radius:4px; font-size:14px; cursor:pointer; }
+  .card button:hover { background:#0a5490; }
+  .disclaimer { text-align:center; font-size:11px; color:#888; margin-top:16px; }
+</style>
+</head>
+<body>
+  <div class="banner">AUTHORIZED SECURITY TEST PAGE &mdash; NO DATA IS TRANSMITTED OR STORED</div>
+  <div class="card">
+    <h2>Document Portal</h2>
+    <p style="font-size:13px;color:#555;">Sign in to view the shared document.</p>
+    <form id="testForm" onsubmit="return handleSubmit(event)">
+      <input type="text" placeholder="Email or username" autocomplete="off">
+      <input type="password" placeholder="Password" autocomplete="off">
+      <button type="submit">Sign in</button>
+    </form>
+    <p class="disclaimer">Test ID: TCD-GHPAGES-20260922<br>This form does not submit or store any data.</p>
+  </div>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      console.log("Test page loaded/interacted with at " + new Date().toISOString());
+      alert("This is a non-functional security test page. No data was sent.");
+      return false;
+    }
+  </script>
+</body>
+</html>
